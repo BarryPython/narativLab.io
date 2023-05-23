@@ -1,0 +1,128 @@
+@import "./global.scss";
+
+.everything{
+    display: flex;
+    flex-direction: row;
+
+    //background
+    background-image: url("../assets/images/everything/background.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    width: 90vw;
+    height: calc(90vw/2.63);
+    margin: 0 5vw;
+
+    &.dark{
+        background-image: url("../assets/images/everything/background_dark.svg");
+    }
+    
+    .illustrations{
+        background-color: #1A1A1A;
+        border-radius: 10px;
+
+        width: 20vw;
+        aspect-ratio: 1/1;
+        margin: auto;
+        margin-left : 10%;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+
+        opacity: 0.0001;
+        transition: opacity 1s 0.25s;
+
+        &.dark{
+            background-color: #222222;
+        }
+
+        svg{
+            grid-row: 1;
+            grid-column: 1;
+            width: 60%;
+            height: 60%;
+            position: relative;
+
+            &:first-child{
+                top: 50%;
+                left: 0%;
+            }
+            
+            &:last-child{
+                top: 0%;
+                left: 50%;
+            }
+        }
+    }
+
+    .content{
+        width: 50vw;
+        height: 80%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10%;
+        margin-left: 10%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 35px;
+
+        opacity: 0;
+
+        transition: opacity 1s 1s;
+
+        h2, p{
+            color: white;
+        }
+
+        a{
+            &:hover{
+                background-color: transparent;
+                color: white;
+                border-color: white;
+
+                svg{
+                    stroke: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px)  {
+
+    .everything{
+        flex-direction: column-reverse;
+        background-image: url("../assets/images/everything/background_mobile.svg");
+        background-size: cover;
+        border-radius: 20px;
+        height: auto;
+        padding: 100px 0;
+
+        justify-content: center;    
+        align-items: center;
+
+        .content{
+            width: 80%;
+            justify-content: flex-start;
+            gap: 25px;
+            height: auto;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .illustrations{
+            height: auto;
+            width: 50vw;
+            height: 50vw;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 0;
+        }
+    }
+
+}

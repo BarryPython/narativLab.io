@@ -1,0 +1,195 @@
+@import "./global.scss";
+
+.dashboard{
+
+    display: flex;
+    flex-direction: column;
+
+    //look
+    background-image: url("../assets/images/dashboard/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    width: 90vw;
+    padding: 60px 0;
+
+    margin: 0 5vw;
+
+    &.dark{
+        background-image: url("../assets/images/dashboard/background_dark.svg");
+    }
+
+    h2{
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+
+        opacity: 0;
+        transition: all 1s 0.3s;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: row;
+        color: white;
+
+        height: 100%;
+
+        opacity: 0;
+        transition: all 1s 0.7s;
+
+        .item-list{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+
+            width: 50%;
+            height: 100%;
+
+            .item{
+
+                display: flex;
+                flex-direction: column;
+
+                max-width: 350px;
+
+                padding: 20px;
+                background-color: #1A1A1A;
+                border-radius: 12px;
+
+                transition: background-color transform 0.5s;
+
+                &.dark{
+                    background-color: #222222;
+                }
+
+                h4{
+                    font-family: $font-familly-title;
+                }
+
+                p{
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: all 0.5s;
+                    color: black !important;
+                }
+
+                &.active{
+
+                    color: black !important;
+
+                    p{
+                        max-height: 200px;
+                        overflow: hidden;
+                        transition: background-color max-height 0.5s 0.5s;
+                        color: black !important;
+                    }
+
+                    h4{
+                        color: black !important;
+                    }
+
+                    &:first-child{
+                        background-color: #7EE48C;
+                    }
+
+                    &:nth-child(2){
+                        background-color: #E47E7E;
+                    }
+
+                    &:nth-child(3){
+                        background-color: #7ECCE4;
+                    }
+
+                    &:last-child{
+                        background-color: #997EE4;
+                    }
+                }
+            }
+        }
+
+        .preview{
+            width: 45%;
+            transition: all .5s;
+
+            background-color: #7ECCE4;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 20px;
+            max-height: 100%;
+
+            img{
+                margin-top: auto;
+                animation: .5s ease-out 0s 1 slideInFromBottom;
+                width: 80%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: .75;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 900px)  {
+  .dashboard{
+    flex-direction: column;
+    background-image: url("../assets/images/dashboard/background_mobile.svg");
+    height: calc(90vw*(803/330));
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 50%;
+    }
+
+    .content{
+        flex-direction: column-reverse;
+        width: auto;
+        margin: 30px;
+        gap: 22px;
+        height: auto;
+
+        .item-list{
+            width: auto;
+            height: auto;
+        }
+        
+        .preview{
+            width: auto;
+            padding: 10px;
+            padding-bottom: 0;
+            margin: 0;
+            height: 25vh;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                margin-top: auto;
+            }
+        }
+    }
+    }
+}

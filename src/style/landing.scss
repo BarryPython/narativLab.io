@@ -1,0 +1,135 @@
+@import "./global.scss";
+
+.landing{
+    margin-top: 100px;
+    height: 90vh;
+    width: 90vw;
+    padding: 0 5vw;
+
+    display: flex;
+
+    //background
+    background-image: url('./../assets/images/landing/background.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:top;
+
+    &.dark{
+        background-image: url('./../assets/images/landing/background_dark.gif');
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        width: 100%;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            gap: 20px;
+
+            h1{
+                font-weight: 800;
+                font-size: 44px;
+                line-height: 54px;
+            }
+
+            h3{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                width: 550px;
+                overflow-wrap: break-word;
+            }
+
+            .btn-group{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+
+                width: fit-content;
+
+                :first-child{
+                    &:hover{
+                        background-color: transparent;
+                        color: black;
+                        border-color: black;
+                    }
+                }
+                :nth-child(2){
+
+                    svg{
+                        stroke: black;
+                        color: black;
+                        fill: black;
+                    }
+
+                    &:hover{
+                        background-color: $l-primary;
+                        color: black;
+                        border-color: transparent;
+
+                        svg{
+                            stroke: black;
+                            color: black;
+                            fill: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .scroll-message{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            gap: 15px;
+
+            transition: all 0.5s;
+
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px)  {
+
+    .landing{
+        margin-top: 70px !important;
+        height: 70vh;
+        margin: 0 5vw;
+        padding: 0;
+
+        .container{
+            margin: 0;
+            .content{
+
+                width: 100%;
+                h1{
+                    font-size: 30px;
+                    line-height: 100%;
+                }
+                h3{
+                    width: 100%;
+                }
+
+                .btn-group{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

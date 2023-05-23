@@ -1,0 +1,256 @@
+@import "./global.scss";
+
+#blur_layer{
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    display: flex;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 90;
+    
+    transition: all 0.5s;
+}
+
+nav{
+    top: 0;
+    width: 90vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5vw;
+    z-index: 99;
+
+    transition: background-color 0.5s;
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+
+        svg{
+            color: black;
+            fill: black;
+            transition: all 0.5s;
+
+            &.dark{
+                fill: white;
+                color: white;
+            }
+
+            &:first-child{
+                height: 23px;
+                width: 23px;
+
+                &.short{
+                    transform: scale(1.75);
+                }
+            }
+        }
+    }
+
+    &.dark{
+        > svg{
+            color: white !important;
+            fill: white !important;
+        }
+    }
+
+    &.scrolled{
+
+        div{
+            &:nth-child(2){
+                opacity: 0;
+            }
+
+            :not(a){
+                opacity: 0;
+            }
+        }
+    }
+
+    > svg {
+        margin: auto 0;
+        cursor: pointer;
+        transition: all 1s;
+        color: black;
+        fill: black;
+
+        &.dark{
+            color: white;
+            fill: white;
+        }
+        
+        &.short{
+            animation: size .25s;
+        }
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+
+        @media only screen and (max-width: 1600px)  {
+            gap: 20px;
+        }
+
+        &:nth-child(2){
+            width: 45vw;
+        }
+
+        a{
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            cursor: pointer;
+        }
+
+
+        button{
+            background-color: transparent;
+            align-items: center;
+            border: 0;
+            width: 40px;
+
+            cursor: pointer;
+
+            svg{
+                width: 20px;
+                height: 100%;
+                color: white;
+            }
+        }
+    }
+}
+
+@keyframes size {
+    0% {
+      transform: scale(0.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    nav{
+        display: none;
+    }
+
+    .mobile-nav{
+        width:90vw;
+        margin: 0 5vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 10;
+
+        transition: background-color 0.5s;
+        &.scrolled{
+            background-color: $l-bg !important;
+    
+            &.dark{
+                background-color: black !important;
+            }
+        }
+
+        svg{
+            height: 30px;
+            fill: black;
+        }
+
+        button{
+            background-color: transparent;
+            border: 0;
+        }
+    }
+
+    .mobile-menu{
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        width: 80vw;
+        height: 100vh;
+        margin-left: 20vw;
+        background-color: $l-bg;
+
+        &.dark{
+            background-color: black;
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        transition: all 0.5s;
+
+        button{
+            background-color: transparent;
+            border: 0;
+        }
+        
+        > div{
+            margin: 0 30px;
+        }
+
+        > :first-child{
+            display: flex;
+            width: auto;
+            padding: 30px 0;
+            justify-content: space-between;
+
+            > :first-child{
+                width: 30px;
+                fill: black;
+            }
+
+            svg{
+                width: 30px;
+            }
+        }
+
+        > :nth-child(2){
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            a{
+                font-family: $font-familly-text;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                text-decoration: none;
+            }
+        }
+
+        > :last-child{
+            margin-top: auto;
+            margin-bottom: 40px;
+
+            @supports (-webkit-touch-callout: none) {
+                margin-bottom: 100px;
+            }
+
+            display: flex;
+            gap: 36px;
+
+            select{
+                height: 40px;
+            }
+
+            svg{
+                width: 15px;
+            }
+        }
+    }
+}

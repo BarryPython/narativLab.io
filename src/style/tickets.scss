@@ -1,0 +1,309 @@
+@import "./global.scss";
+
+.tickets{
+    width: 82vw;
+    margin: 0 5vw;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &.dark{
+        background-color: #141414;
+
+        .detail{
+            background-color: #222222 !important;
+        }
+
+        .main-btn{
+            &:hover{
+                color: white !important;
+                border-color: white !important;
+            }
+        }
+        .secondary-btn{
+                color: white !important;
+                border-color: white !important;
+
+            &:hover{
+                    color: black !important;
+                    border-color: black !important;
+                }
+            }
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        width: 45%;
+
+        opacity: 0;
+        transition: all 1s 0.5s;
+        margin-top: auto;
+
+        .buttons{
+            display: flex;
+            gap: 20px;
+
+            .main-btn{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+
+            .secondary-btn{
+                background-color: transparent;
+
+                &.dark{
+                    color: white;
+                    border-color: white;
+                }
+
+                &:hover{
+                    background-color: $d-primary;
+
+                    &.dark{
+                        color: black;
+                        border-color: black;
+                    }
+                }
+            }
+        }
+
+        .content-item{
+            padding: 40px;
+            background-color: #F0F3F3;
+            border-radius: 15px;
+
+            //display
+            display: flex;
+            flex-direction: column;
+        
+            gap: 30px;
+
+            &.dark{
+                background-color: #222222;
+            }
+
+            h3{
+                font-family: $font-familly-title;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 30px; 
+            }
+
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            a{
+                //display
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 7px;
+
+                font-family: $font-familly-text;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                svg{
+                    fill: black;
+                    stroke: black;
+                }
+
+                &.dark{
+                    svg{
+                        fill: white;
+                        stroke: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .detail{
+        width: 50%;
+        background-color: black;
+        border-radius: 15px;
+        
+        //display
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        padding: 0 0;
+
+        gap: 20px;
+
+        opacity: 0;
+        transition: opacity 1s 1s;  
+        height: 541px;
+        max-height: 541px;
+        padding: 20px 10px ;
+
+        h2{
+            margin-right: auto;
+            margin-left: 5%;
+            margin-bottom: 30px;
+            padding: 0;
+            
+        }
+
+        .pass-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+
+            width: 80%;
+            background-color: #1A1A1A;
+            border-radius: 12px;
+            padding: 5%;
+
+            svg{
+                width: 50px;
+            }
+
+            p{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        h3{
+            font-family: $font-familly-title;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 100%;
+            width: 80%;
+        }
+
+        > p{
+            font-family: $font-familly-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            width: 80%;
+        }
+
+        .detail-item-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            row-gap: 20px;
+            width: 80%;
+
+            .item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 60px;
+                padding: 0 3%;
+                background-color: #1A1A1A;
+                border-radius: 12px;
+                
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px)  {
+
+    .tickets{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        width: auto;
+        gap: 30px;
+
+        .content{
+            width: 100%;
+
+            .content-item{
+                h3{
+                    font-size: 22px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .detail{
+            width: 80%;
+            align-items: flex-start;
+
+            height: auto;
+            max-height: none;
+
+            &.pass{
+                background-color: black;
+                padding: 40px 30px;
+
+                h2{
+                    font-size: 22px;
+                }
+
+                .pass-item{
+                width: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px;
+
+                    svg{
+                        width: auto;
+                        height: 30px;
+                    }
+                }
+            }
+
+            &.lottery{
+
+                width: 90%;
+                padding: 30px 5%;
+                h3{
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+                .detail-item-list{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .item{
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

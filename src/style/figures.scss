@@ -1,0 +1,112 @@
+@import "./global.scss";
+
+.figures{
+    //background
+    background-color: white;
+
+    //display
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+    //look
+    width: 90%;
+    margin: 0 5%;
+
+    &.dark{
+        background-color: $d-primary;
+    }
+
+    img{
+        width: 50vw;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        gap: 24px;
+        padding: 30px;
+
+        opacity: 0;
+        transition: all 1s 0.7s;
+
+        svg{
+            width: 40px;
+            height: 40px;
+            fill: black;
+        }
+
+        .dark{
+            color: black;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px)  {
+
+    .figures{
+        flex-direction: column;
+        
+        .number-list{
+            display: grid;
+            grid-template-columns: 100%;
+            gap : 24px;
+            width: fit-content;
+            height: 1500px ;
+            margin: 0 auto;
+
+            .item{
+                height: 224px;
+                aspect-ratio: 1/1;
+                padding: 18px;
+                background-color: black;
+                border-radius: 16px;
+                gap: 20px;
+
+                grid-row: 1;
+                grid-column: 1;
+
+                display: flex;
+
+                > span{
+                    background-color: #7EE48C;
+                    border-radius: 8px;
+                    writing-mode: vertical-lr;
+                    transform: scale(-1);
+                    padding:  15px 15px;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 100%;
+                    font-family: $font-familly-title;
+                }
+
+                > div{
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    height: 60%;
+                    margin: auto 0;
+
+                    h4{
+                        font-family: $font-familly-title;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 100%;
+                    }
+
+                    p{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+
+}

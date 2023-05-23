@@ -1,0 +1,217 @@
+@import "./global.scss";
+
+.movies{
+    width: 90%;
+    margin: 0 5%;
+
+    //display
+    display: flex;
+    flex-direction: row;
+
+    // look
+    background-color: white;
+    border-radius: 20px;
+
+    &.dark{
+        background-color: #141414;
+    }
+
+    img{
+        margin: 5% 0 5% 5%;
+        width: 30%;
+        object-fit: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        animation: .5s ease-out 0s 1 movieSlide;
+    }
+
+    .content{
+        padding: 5%;
+        height: 90%;
+        width: 40%;
+        margin: auto 0;
+
+        //dislpay
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 35px;
+
+        opacity : 0.0001;
+        transition: opacity 1s .75s;
+
+        .movie-detail{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+
+            //look
+            width: 100%;
+            background-color: #F0F3F3;
+            padding: 30px;
+            border-radius: 10px;
+
+            opacity: 0;
+            transition: all 1s 1s;
+
+            &.dark{
+                background-color: #222222;
+                fill: white;
+                color: white !important;
+            }
+
+            h2{
+                font-weight: 700;
+                font-size: 26px;
+                line-height: 36px;
+            }
+
+            h3{
+                animation: .5s ease-out 0s 1 titleSlide;
+            }
+
+            .detail-list{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+
+                .detail-item{
+                    display: flex;
+                    flex-direction: row;
+
+                    gap: 15px;
+
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+            
+                        > span{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            gap: 5px;
+                            
+
+                            p{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 21px;
+                                animation: numberSlide .5s ease-out 0s 1 ;
+                            }
+                        }
+
+                        h4{
+                            font-family: $font-familly-title;
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 21px;
+                            animation: numberSlide .5s ease-out 0s 1 ;
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            :hover{
+                background-color: $l-primary !important;
+                border-color: transparent !important;
+            }
+
+            svg{
+                fill: transparent;
+            }
+
+            :first-child{
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes movieSlide {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes titleSlide {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes numberSlide {
+    0% {
+      transform: translateY(20px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 900px)  {
+    .movies{
+        flex-direction: column-reverse;
+
+        .content{
+            width: auto;
+            margin: 0;
+            padding: 30px;
+
+            .movie-detail{
+                width: 80%;
+                padding: 10%;
+
+                .detail-list{
+                    flex-direction: column;
+                    width: max-content;
+                    align-items: flex-start;
+                    gap: 15px;
+                }
+            }
+
+            .buttons{
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        img{
+            width: 80%;
+            aspect-ratio: 1/1;
+            margin: 10%;
+            padding-top: 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+}
