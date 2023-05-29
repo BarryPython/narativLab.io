@@ -11,6 +11,7 @@ import {ReactComponent as Badge} from '../assets/icons/badge.svg';
 
 //style
 import "../style/tickets.scss"
+import '../style/screen.scss'
 
 export default function Tickets({dark}){
 
@@ -29,7 +30,7 @@ export default function Tickets({dark}){
     )
 
     return (
-        <animated.section className="tickets" ref={ref} style={{...springs}}>
+        <animated.section className="screen" ref={ref} style={{...springs}}>
             <InView className="content" onChange={(a,entry)=>{if(a)entry.target.style.opacity=1}}>
                 <h2>{t("tickets_title")}</h2>
                 <div className="buttons">
@@ -55,7 +56,7 @@ export default function Tickets({dark}){
             </InView>
             {!lottery ? 
                 <InView className="detail lottery" onChange={(a,entry)=>{if(a)entry.target.style.opacity=1}}>
-                    <h3>{t("ticket_content_2_title")}</h3>
+                    <h2>{t("ticket_content_2_title")}</h2>
                     <p>{t("ticket_content_2_text")}</p>
                     <div className="detail-item-list">
                         <p className="item">125 NRT = <strong>5%</strong></p>
