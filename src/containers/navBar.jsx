@@ -98,29 +98,32 @@ export default function Navbar({setDark, dark}){
                 </button>
             </div>
             <div className='mobile-menu mobile-only' style={{transform : (mobile_menu? "" : "translateX(100vw)")}}>
-                <div>
-                    {!dark ? <LogoShortDark /> : <LogoShort style={{"fill" : "black"}}/>}
-                    <button onClick={()=>setMobile_menu(false)}>
-                        <Close style={{fill : !dark ? "white" : "black"}} />
-                    </button>
-                </div>
-                <div>
-                    <a onClick={()=>setMobile_menu(false)} href='/#industry'>{t("nav_about")}</a>
-                    <a onClick={()=>setMobile_menu(false)} href='/#figures'>{t("nav_market")}</a>
-                    <a onClick={()=>setMobile_menu(false)} href='/#movie'>{t("nav_solution")}</a>
-                    <a onClick={()=>setMobile_menu(false)} href='/#everything'>{t("nav_invest")}</a>
-                    <a onClick={()=>setMobile_menu(false)} href='/#screen'>{t("nav_screen")}</a>
-                    <a onClick={()=>setMobile_menu(false)} href='/#dashboard'>{t("nav_dashboard")}</a>
-                    <a href='https://mint.narativlab.io/' className='main-btn'>Get my Narativ Pass</a>
-                </div>
-                <div>
-                    <select className='secondary-btn' onChange={(e)=>{i18n.changeLanguage(e.target.value)}} defaultValue={i18n.language}>
-                        <option value="en">EN</option>
-                        <option value="fr">FR</option>
-                    </select>
-                    <button onClick={()=>{setDark(!dark);switch_dark(dark)}}>
-                        {!dark ? <Sun /> : <Moon />}
-                    </button>
+                <button className='close' onClick={()=>setMobile_menu(false)}></button>
+                <div className='menu'>
+                    <div>
+                        {!dark ? <LogoShortDark /> : <LogoShort style={{"fill" : "black"}}/>}
+                        <button onClick={()=>setMobile_menu(false)}>
+                            <Close style={{fill : !dark ? "white" : "black"}} />
+                        </button>
+                    </div>
+                    <div>
+                        <a onClick={()=>setMobile_menu(false)} href='/#industry'>{t("nav_about")}</a>
+                        <a onClick={()=>setMobile_menu(false)} href='/#figures'>{t("nav_market")}</a>
+                        <a onClick={()=>setMobile_menu(false)} href='/#movie'>{t("nav_solution")}</a>
+                        <a onClick={()=>setMobile_menu(false)} href='/#everything'>{t("nav_invest")}</a>
+                        <a onClick={()=>setMobile_menu(false)} href='/#screen'>{t("nav_screen")}</a>
+                        <a onClick={()=>setMobile_menu(false)} href='/#dashboard'>{t("nav_dashboard")}</a>
+                        <a href='https://mint.narativlab.io/' className='main-btn'>Get my Narativ Pass</a>
+                    </div>
+                    <div>
+                        <select className='secondary-btn' onChange={(e)=>{i18n.changeLanguage(e.target.value)}} defaultValue={i18n.language}>
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                        </select>
+                        <button onClick={()=>{setDark(!dark);switch_dark(dark)}}>
+                            {!dark ? <Sun /> : <Moon />}
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
