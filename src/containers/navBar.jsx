@@ -88,7 +88,7 @@ export default function Navbar({setDark, dark}){
                         <option value="en">EN</option>
                         <option value="fr">FR</option>
                     </select>
-                    <a href='https://mint.narativlab.io/' className='secondary-btn'>Narativ Pass</a>
+                    <a href='https://mint.narativlab.io/' className='main-btn'>{t("nav_main_btn")}</a>
                 </div>
             </nav>
             <div className='mobile-nav mobile-only' ref={navMobileElement}>

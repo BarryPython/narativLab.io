@@ -10,6 +10,7 @@ import {ReactComponent as TWITTER} from '../assets/icons/TWITTER.svg';
 import {ReactComponent as INSTA} from '../assets/icons/INSTA.svg';
 import {ReactComponent as MEDIUM} from '../assets/icons/MEDIUM.svg';
 import {ReactComponent as GITBOOK} from '../assets/icons/GITBOOK.svg';
+import {ReactComponent as DISCORD} from '../assets/icons/DISCORD.svg';
 
 //pdf
 import paper from '../assets/whitepaper.pdf';
@@ -40,7 +41,7 @@ export default function Footer(){
                     <a target="_blank" rel="noreferrer" href="mailto:contact@narativlab.io">Contact</a>
                     <a href={paper} target="_blank" rel="noreferrer">{t("footer_white")}</a>
                     <a target="_blank" rel="noreferrer" href="https://linktr.ee/narativlab">{t("footer_official")}</a>
-                    <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/team-and-partners">{t("footer_team")}</a>
+                    <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/technical/security">{t("footer_audit")}</a>
                     <a target="_blank" rel="noreferrer" href="https://medium.com/@narativlab">{t("footer_blog")}</a>
                 </div>
                 <form classnName="email-subscribe" onSubmit={(e)=>{e.preventDefault();
@@ -52,6 +53,7 @@ export default function Footer(){
                     <h4>{t("footer_newsletter")}</h4>
                     <div className="social">
                         <a target="_blank" rel="noreferrer"href="https://narativlab.gitbook.io/narativlab/"><GITBOOK /></a>
+                        <a target="_blank"href="https://discord.gg/YaNcKuU5dS"><DISCORD /></a>
                         <a target="_blank" rel="noreferrer"href="https://twitter.com/narativlab"><TWITTER /></a>
                         <a target="_blank" rel="noreferrer"href="https://medium.com/@narativlab"><MEDIUM /></a>
                         <a target="_blank" rel="noreferrer"href="https://www.instagram.com/narativlab/"><INSTA /></a>                     

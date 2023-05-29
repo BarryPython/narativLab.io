@@ -44,7 +44,7 @@ function Landing({setDot, dark}){
                         {t("landing_subtitle")}
                     </h3>
                     <div className='btn-group'>
-                        <a href='https://mint.narativlab.io/' className='main-btn'>
+                        <a href='https://invest.narativlab.io/' className='main-btn'>
                             {t("landing_btn_first")}
                         </a>
                         <a href='https://narativlab.gitbook.io/narativlab/' target="_blank" rel="noreferrer" className='secondary-btn'>
