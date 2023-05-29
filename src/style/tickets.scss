@@ -2,10 +2,16 @@
 
 .screen{
 
+    gap : 50px !important;
+
     &.dark{
 
+
         .detail{
-            background-color: #222222 !important;
+            background-color: $d-primary !important;
+            h2{
+                color: #1A1A1A;
+            }
         }
 
         .main-btn{
@@ -34,6 +40,7 @@
         flex-grow: 1;
 
         opacity: 0;
+        transform: none !important;
         transition: all 1s 0.5s;
 
         .buttons{
