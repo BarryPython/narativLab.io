@@ -59,26 +59,26 @@ export default function Tickets({dark}){
                     <h2>{t("ticket_content_2_title")}</h2>
                     <p>{t("ticket_content_2_text")}</p>
                     <div className="detail-item-list">
-                        <p className="item">125 NRT = <strong>5%</strong></p>
-                        <p className="item">500 NRT = <strong>15%</strong></p>
-                        <p className="item">1,500 NRT = <strong>30%</strong></p>
-                        <p className="item">5,000 NRT = <strong>50%</strong></p>
-                        <p className="item">15,0000 NRT = <strong>75%</strong></p>
-                        <p className="item">Pass = <strong>100%</strong></p>
+                        <p className="item white">125 NRT = <strong>5%</strong></p>
+                        <p className="item white">500 NRT = <strong>15%</strong></p>
+                        <p className="item white">1,500 NRT = <strong>30%</strong></p>
+                        <p className="item white">5,000 NRT = <strong>50%</strong></p>
+                        <p className="item white">15,0000 NRT = <strong>75%</strong></p>
+                        <p className="item white">Pass = <strong>100%</strong></p>
                     </div>
                 </InView>
                 :
                 <InView className="detail pass" onChange={(a,entry)=>{if(a)entry.target.style.opacity=1}}>
                     <h2>{t("ticker_pass_benefits")}</h2>
-                    <div className="pass-item">
+                    <div className="pass-item white">
                         <Card />
                         <p>{t("ticket_content_1_2")}</p>
                     </div>
-                    <div className="pass-item">
+                    <div className="pass-item white">
                         <Star />
                         <p>{t("ticket_content_1_3")}</p>
                     </div>
-                    <div className="pass-item">
+                    <div className="pass-item white">
                         <Badge />
                         <p>{t("ticket_content_1_4")}</p>
                     </div>

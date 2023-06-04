@@ -6,12 +6,20 @@
 
     &.dark{
 
-
         .detail{
             background-color: $d-primary !important;
-            h2{
+            h2,p{
                 color: #1A1A1A;
             }
+
+            .white{
+
+                color: white !important;
+                p{
+                    color: white !important;
+                }
+            }
+
         }
 
         .main-btn{
