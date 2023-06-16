@@ -12,8 +12,6 @@ import {ReactComponent as MEDIUM} from '../assets/icons/MEDIUM.svg';
 import {ReactComponent as GITBOOK} from '../assets/icons/GITBOOK.svg';
 import {ReactComponent as DISCORD} from '../assets/icons/DISCORD.svg';
 
-//pdf
-import paper from '../assets/whitepaper.pdf';
 
 export default function Footer(){
 
@@ -39,7 +37,7 @@ export default function Footer(){
                 <div className="pages">
                     <h4>{t("footer_about")}</h4>
                     <a target="_blank" rel="noreferrer" href="mailto:contact@narativlab.io">Contact</a>
-                    <a href={paper} target="_blank" rel="noreferrer">{t("footer_white")}</a>
+                    <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">{t("footer_white")}</a>
                     <a target="_blank" rel="noreferrer" href="https://linktr.ee/narativlab">{t("footer_official")}</a>
                     <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/technical/security">{t("footer_audit")}</a>
                     <a target="_blank" rel="noreferrer" href="https://medium.com/@narativlab">{t("footer_blog")}</a>
