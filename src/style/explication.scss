@@ -1,0 +1,63 @@
+@import "./theme.scss";
+
+.explication{
+    background-color: $l-accent;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: calc(90vw - 100px);
+
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-around;
+    align-content: space-between;
+    padding: 50px;
+
+    @media only screen and (max-width: 900px)  {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    &.dark{
+
+        background-color: #141414;
+
+        p,h2{
+            color: black;
+        }
+    }
+
+    .item{
+        background-color: white;
+        border-radius: 10px;
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+
+        svg{
+            min-height: 150px;
+            max-height: 150px;
+        }
+
+        h2{
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal; 
+        }
+    }
+}

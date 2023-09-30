@@ -13,6 +13,7 @@ import './i18n'
 import Footer from './containers/footer';
 
 import { InView } from 'react-intersection-observer';
+import Explication from './containers/Explication';
 
 function App() {
 
@@ -62,6 +63,9 @@ function App() {
         </InView>
         <InView id="industry" onChange={(inView)=>{if(inView){setDot("industry")}}} rootMargin={"-200px"} className="center">
           <Industry />
+        </InView>
+        <InView id="explication" onChange={(inView)=>{if(inView){setDot("explication")}}} rootMargin={"-200px"} className="center">
+          <Explication />
         </InView>
         <InView id="figures" onChange={(inView)=>{if(inView){setDot("figures")}}} rootMargin={"-200px"} className="center">
           <Figures dark={dark} />

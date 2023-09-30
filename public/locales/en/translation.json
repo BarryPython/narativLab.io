@@ -21,6 +21,13 @@
     "industry_funding" : "Community Funding",
     "industry_redistributed" : "Profits Fairly Redistributed",
 
+    "explication_film_title" : "Choose your film",
+    "explication_film_content" : "Our team selects scenarios based on their potential profitability and feasibility. Choose your favorite film from our selection.",
+    "explication_invest_title" : "Invest",
+    "explication_invest_content" : "Leverage the profitability potential of the film industry using our innovative tool. In just 4 simple clicks, you can efficiently realize your investment.",
+    "explication_earn_title" : "Earn",
+    "explication_earn_content" : "After the film's release, retrieve your profits with a single click. An ideal way to diversify your portfolio, with no management concerns.",
+
     "figures_title" : "Some figures",
     "figures_text" : "The film industry is widely recognized for its exceptional profitability.\n\nWe we have meticulously gathered and analyzed the annual statistics from recent years to provide a comprehensive overview.",
     "figures_number_movie" :"Movies",

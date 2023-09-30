@@ -21,6 +21,13 @@
     "industry_funding" : "Financement communautaire",
     "industry_redistributed" : "Bénéfices équitablement redistribués",
 
+    "explication_film_title": "Selection de films",
+    "explication_film_content": "Notre équipe sélectionne des scénarios en fonction de leur rentabilité potentielle et de leur faisabilité. Choisissez votre film préféré parmi notre sélection.",
+    "explication_invest_title": "Investir",
+    "explication_invest_content": "Exploitez le potentiel de rentabilité de l'industrie cinématographique grâce à notre outil innovant. En seulement 4 clics simples, vous pouvez efficacement réaliser votre investissement.",
+    "explication_earn_title": "Gagner",
+    "explication_earn_content": "Après la sortie du film, récupérez vos profits en un seul clic. Un moyen idéal de diversifier votre portefeuille, sans souci de gestion.",
+
     "figures_title" : "Bénéfices équitablement redistribués",
     "figures_text" : "L'industrie cinématographique est souvent saluée pour sa grande rentabilité.\n\nNous avons pris le temps d'assembler et d'analyser méticuleusement les statistiques annuelles des dernières années pour fournir une vue d'ensemble exhaustive.",
     "figures_number_movie" :"Films",
