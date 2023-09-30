@@ -50,11 +50,11 @@ export default function Footer(){
                 }}>
                     <h4>{t("footer_newsletter")}</h4>
                     <div className="social">
-                        <a target="_blank" rel="noreferrer"href="https://narativlab.gitbook.io/narativlab/"><GITBOOK /></a>
-                        <a target="_blank"href="https://discord.gg/YaNcKuU5dS"><DISCORD /></a>
-                        <a target="_blank" rel="noreferrer"href="https://twitter.com/narativlab"><TWITTER /></a>
-                        <a target="_blank" rel="noreferrer"href="https://medium.com/@narativlab"><MEDIUM /></a>
-                        <a target="_blank" rel="noreferrer"href="https://www.instagram.com/narativlab/"><INSTA /></a>                     
+                        <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/"><GITBOOK /></a>
+                        <a target="_blank" rel="noreferrer" href="https://discord.gg/YaNcKuU5dS"><DISCORD /></a>
+                        <a target="_blank" rel="noreferrer" href="https://twitter.com/narativlab"><TWITTER /></a>
+                        <a target="_blank" rel="noreferrer" href="https://medium.com/@narativlab"><MEDIUM /></a>
+                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/narativlab/"><INSTA /></a>                     
                     </div>
                     <div className="newsletter_input">
                             <input ref={emailInput} placeholder={t("footer_placeholder")} type="email" name="EMAIL" classnName="required email" id="mce-EMAIL" required onChange={(e)=>setEmail(e.target.value)}></input>

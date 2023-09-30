@@ -1,15 +1,15 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import DotMenu from './containers/dotMenu';
-import Everything from './containers/everything';
+//import Everything from './containers/everything';
 import Figures from './containers/figures';
 import Industry from './containers/industry';
 import Landing from './containers/landing';
 import Movie from './containers/movie';
 import Navbar from './containers/navBar';
-import Tickets from './containers/tickets';
+//import Tickets from './containers/tickets';
 import Screen from './containers/screen';
 import './i18n'
-import Dashboard from './containers/dashboard';
+//import Dashboard from './containers/dashboard';
 import Footer from './containers/footer';
 
 import { InView } from 'react-intersection-observer';
@@ -69,17 +69,8 @@ function App() {
         <InView id="movie" onChange={(inView)=>{if(inView){setDot("movie")}}} rootMargin={"-200px"} className="center">
           <Movie dark={dark} />
         </InView>
-        <InView id="everything" onChange={(inView)=>{if(inView){setDot("everything")}}} rootMargin={"-200px"} className="center">
-          <Everything />
-        </InView>
-        <InView id="tickets" onChange={(inView)=>{if(inView){setDot("tickets")}}} rootMargin={"-200px"} className="center">
-          <Tickets dark={dark}/>
-        </InView>
         <InView id="screen" onChange={(inView)=>{if(inView){setDot("screen")}}} rootMargin={"-200px"} className="center">
           <Screen />
-        </InView>
-        <InView id="dashboard" onChange={(inView)=>{if(inView){setDot("dashboard")}}} rootMargin={"-200px"} className="center">
-          <Dashboard />
         </InView>
         <Footer/>
       </Suspense>
