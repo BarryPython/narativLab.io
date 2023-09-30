@@ -7,8 +7,6 @@ import "../style/landing.scss"
 //svg import
 import {ReactComponent as ArrowDown} from '../assets/icons/arrowDown.svg';
 import {ReactComponent as ArrowDownDark} from '../assets/icons/arrowDown_dark.svg';
-import {ReactComponent as ArrowGrow} from '../assets/icons/arrowGrow.svg';
-import {ReactComponent as ArrowGrowDark} from '../assets/icons/arrowGrow_dark.svg';
 
 function Landing({setDot, dark}){
 
@@ -44,12 +42,8 @@ function Landing({setDot, dark}){
                         {t("landing_subtitle")}
                     </h3>
                     <div className='btn-group'>
-                        <a href='https://invest.narativlab.io/' className='main-btn'>
+                        <a href='/#industry' className='main-btn'>
                             {t("landing_btn_first")}
-                        </a>
-                        <a href='https://narativlab.gitbook.io/narativlab/' target="_blank" rel="noreferrer" className='secondary-btn'>
-                            {t("landing_btn_second")}
-                            {!dark ? <ArrowGrowDark /> :<ArrowGrow />}
                         </a>
                     </div>
                 </div>

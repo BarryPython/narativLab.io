@@ -1,17 +1,17 @@
 {
     "landing_title": "Investissez\ndans le cinéma",
     "landing_subtitle" : "Narativ, la plateforme de financement de films qui offre des\nrendements élevés aux investisseurs en soutenant les scénaristes.",
-    "landing_btn_first" : "Investir dans $NRT",
+    "landing_btn_first" : "Join the investment waitlist",
     "landing_btn_second" : "Lire la Documentation",
     "landing_scroll_txt" : "Faite défiler pour plus",
 
-    "nav_about" : "À propos",
+    "nav_about" : "Discover Films Investments",
     "nav_market" : "Analyse",
     "nav_solution" : "Solution",
     "nav_invest" : "Investir",
     "nav_screen" : "Scénaristes",
-    "nav_dashboard" : "Dashboard",
-    "nav_main_btn" : "Dashboard",
+    "nav_dashboard" : "Profil",
+    "nav_main_btn" : "Profil",
 
     "industry_title" : "Révolutionner l'industrie du divertissement",
     "industry_text" : "Narativ a pour ambition de redynamiser l'industrie cinématographique en proposant une approche novatrice en phase avec son temps. \n\nNous remettons en question les méthodes de financement actuelles qui sont dépassées et monopolisées, laissant de nombreux scénaristes créatifs sans financement et limitant ainsi la diversité dans le cinéma.",
@@ -73,9 +73,9 @@
 
     "footer_copywright" : "Copyright 2023 narativlab.io | Tous droits réservés.",
     "footer_explore" : "Explorer",
-    "footer_market" : "Analyse",
+    "footer_market" : "Market Analysis",
     "footer_solution" : "Solution",
-    "footer_invest" : "Investir",
+    "footer_invest" : "Problems",
     "footer_screen" : "Scénaristes",
     "footer_dashboard" : "Dashboard",
     "footer_about" : "À propos",

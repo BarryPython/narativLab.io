@@ -8,10 +8,12 @@ import "../style/footer.scss"
 import {ReactComponent as Logo} from '../assets/icons/logo.svg';
 import {ReactComponent as TWITTER} from '../assets/icons/TWITTER.svg';
 import {ReactComponent as INSTA} from '../assets/icons/INSTA.svg';
-import {ReactComponent as MEDIUM} from '../assets/icons/MEDIUM.svg';
+import {ReactComponent as BLOG} from '../assets/icons/BLOG.svg';
 import {ReactComponent as GITBOOK} from '../assets/icons/GITBOOK.svg';
-import {ReactComponent as DISCORD} from '../assets/icons/DISCORD.svg';
+import {ReactComponent as LINKEDIN} from '../assets/icons/LINKEDIN.svg';
 
+import policy from "../assets/Privacy_Policy.pdf"
+import conditions from "../assets/Terms__Conditions.pdf"
 
 export default function Footer(){
 
@@ -28,19 +30,17 @@ export default function Footer(){
                 </div>
                 <div className="pages">
                     <h4>{t("footer_explore")}</h4>
-                    <a href='/#figures'>{t("nav_market")}</a>
-                    <a href='/#movie'>{t("nav_solution")}</a>
-                    <a href='/#everything'>{t("nav_invest")}</a>
-                    <a href='/#screen'>{t("nav_screen")}</a>
-                    <a href='/#dashboard'>{t("nav_dashboard")}</a>
+                    <a href='/#everything'>{t("footer_invest")}</a>
+                    <a href='/#movie'>{t("footer_solution")}</a>
+                    <a href='/#figures'>{t("footer_market")}</a>
+                    <a href='/#screen'>{t("footer_screen")}</a>
                 </div>
                 <div className="pages">
                     <h4>{t("footer_about")}</h4>
-                    <a target="_blank" rel="noreferrer" href="mailto:contact@narativlab.io">Contact</a>
-                    <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">{t("footer_white")}</a>
+                    <a target="_blank" rel="noreferrer" href={policy} >Privacy Policy</a>
+                    <a target="_blank" rel="noreferrer" href={conditions}>Terms & Conditions</a>
                     <a target="_blank" rel="noreferrer" href="https://linktr.ee/narativlab">{t("footer_official")}</a>
-                    <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/technical/security">{t("footer_audit")}</a>
-                    <a target="_blank" rel="noreferrer" href="https://medium.com/@narativlab">{t("footer_blog")}</a>
+                    <a target="_blank" rel="noreferrer" href="mailto:contact@narativlab.io">Contact</a>
                 </div>
                 <form classnName="email-subscribe" onSubmit={(e)=>{e.preventDefault();
                 fetch(`https://narativlabewt4jgsw-subscribe-newsletter.functions.fnc.fr-par.scw.cloud/?email=${email}`);
@@ -51,10 +51,11 @@ export default function Footer(){
                     <h4>{t("footer_newsletter")}</h4>
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://narativlab.gitbook.io/narativlab/"><GITBOOK /></a>
-                        <a target="_blank" rel="noreferrer" href="https://discord.gg/YaNcKuU5dS"><DISCORD /></a>
                         <a target="_blank" rel="noreferrer" href="https://twitter.com/narativlab"><TWITTER /></a>
-                        <a target="_blank" rel="noreferrer" href="https://medium.com/@narativlab"><MEDIUM /></a>
-                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/narativlab/"><INSTA /></a>                     
+                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/narativlab/"><INSTA /></a>  
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/narativlab/"><LINKEDIN /></a>
+                        <a target="_blank" rel="noreferrer" href="https://bento.me/narativmag"><BLOG /></a>
+                                           
                     </div>
                     <div className="newsletter_input">
                             <input ref={emailInput} placeholder={t("footer_placeholder")} type="email" name="EMAIL" classnName="required email" id="mce-EMAIL" required onChange={(e)=>setEmail(e.target.value)}></input>

@@ -94,7 +94,8 @@ nav{
 
     div{
         display: flex;
-        justify-content: center;
+        justify-content: left;
+        width: auto;
         align-items: center;
         gap: 45px;
 
@@ -103,7 +104,8 @@ nav{
         }
 
         &:nth-child(2){
-            width: 45vw;
+            margin-right: auto;
+            margin-left: 40px;
         }
 
         a{

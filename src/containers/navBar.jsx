@@ -74,11 +74,6 @@ export default function Navbar({setDark, dark}){
                 </span>
                 <div>
                     <a href='/#industry'>{t("nav_about")}</a>
-                    <a href='/#figures'>{t("nav_market")}</a>
-                    <a href='/#movie'>{t("nav_solution")}</a>
-                    <a href='/#everything'>{t("nav_invest")}</a>
-                    <a href='/#screen'>{t("nav_screen")}</a>
-                    <a href='/#dashboard'>{t("nav_dashboard")}</a>
                 </div>
                 <div>
                     <button onClick={()=>{setDark(!dark);switch_dark(dark)}}>
@@ -88,7 +83,7 @@ export default function Navbar({setDark, dark}){
                         <option value="en">EN</option>
                         <option value="fr">FR</option>
                     </select>
-                    <a href='https://app.narativlab.io/' className='main-btn'>{t("nav_main_btn")}</a>
+                    <a href='/#' className='main-btn'>{t("nav_main_btn")}</a>
                 </div>
             </nav>
             <div className='mobile-nav mobile-only' ref={navMobileElement}>
@@ -108,12 +103,6 @@ export default function Navbar({setDark, dark}){
                     </div>
                     <div>
                         <a onClick={()=>setMobile_menu(false)} href='/#industry'>{t("nav_about")}</a>
-                        <a onClick={()=>setMobile_menu(false)} href='/#figures'>{t("nav_market")}</a>
-                        <a onClick={()=>setMobile_menu(false)} href='/#movie'>{t("nav_solution")}</a>
-                        <a onClick={()=>setMobile_menu(false)} href='/#everything'>{t("nav_invest")}</a>
-                        <a onClick={()=>setMobile_menu(false)} href='/#screen'>{t("nav_screen")}</a>
-                        <a onClick={()=>setMobile_menu(false)} href='/#dashboard'>{t("nav_dashboard")}</a>
-                        <a href='https://mint.narativlab.io/' className='main-btn'>Get my Narativ Pass</a>
                     </div>
                     <div>
                         <select className='secondary-btn' onChange={(e)=>{i18n.changeLanguage(e.target.value)}} defaultValue={i18n.language}>
